@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div>TODO write content</div>
+
+        <script>
+
+            var algo = holaMundo() ;
+
+            function holaMundo() {
+
+                var url = "http://https://www.somosbelcorp.com/Pedido/virtualCoach?param=01751201716SMS";
+
+                name = 'param';
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                        results = regex.exec(url);
+                var Parametro = "";
+                if (!results)
+                    Parametro = null;
+                if (!results[2])
+                    Parametro = '';
+                Parametro = decodeURIComponent(results[2].replace(/\+/g, " "));
+                var Parametro_str = Parametro.toString();
+
+                return Parametro_str.substring(11, Parametro_str.length);
+            };
+
+            alert(algo);
+
+        </script>
+
+    </body>
+
+</html>
